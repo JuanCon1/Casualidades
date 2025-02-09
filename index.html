@@ -11,9 +11,52 @@
     <link rel="icon" type="image/x-icon" href="assets/ICONO_CASUALIDADES.ico">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet">
+    <style>
+        /* Estilos para el banner firma de libros */
+        #banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            z-index: 1000;
+        }
+        #banner img {
+            max-width: 100%;
+            height: auto;
+        }
+        #closeBanner {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 2px 6px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="banner" style="width: 8.5cm; height: 5cm;">
+        <button id="closeBanner">X</button>
+        <img src="assets/BANNER_PAGINA.jpg" alt="Mensaje Firma de libros">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const banner = document.getElementById("banner");
+            const closeBtn = document.getElementById("closeBanner");
+
+            closeBtn.addEventListener("click", function () {
+                banner.style.display = "none"; // Oculta el banner
+            });
+        });
+    </script>
+
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
