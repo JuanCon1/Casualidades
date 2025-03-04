@@ -11183,3 +11183,14 @@ fieldset:disabled .btn {
   background-position: center;
   background-size: cover;
 }
+
+ .social-link {
+        text-decoration: none; /* Quita el subrayado */
+      }
+ /*.carousel-item img {
+   /*  width: 50%;  /* Reduce el tamaño al 50% */
+   /*  height: auto; /* Mantiene la proporción */
+    /* margin: auto; /* Centra la imagen */
+ /*}
+
+    

@@ -45,7 +45,7 @@
 <body>
     <div id="banner" style="width: 8.5cm; height: 5cm;">
         <button id="closeBanner">X</button>
-        <img src="assets/BANNER_PAGINA.jpg" alt="Mensaje Firma de libros">
+        <img src="assets/BANNER_PAGINA2.jpg" alt="Mensaje Firma de libros">
     </div>
 
     <script>
@@ -92,6 +92,45 @@
             </div>
         </div>
     </nav>
+    <!-- INICIA CARRUSEL DE IMÁGENES -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators" id="carousel-indicators"></div>
+        <div class="carousel-inner" id="carousel-inner"></div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let indicators = "";
+            let images = "";
+
+            for (let i = 0; i < 31; i++) {
+                indicators += `<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="${i}"
+                ${i === 0 ? 'class="active" aria-current="true"' : ''} aria-label="Slide ${i + 1}"></button>`;
+            }
+
+            for (let i = 1; i <= 31; i++) {
+                images += `
+                    <div class="carousel-item ${i === 1 ? 'active' : ''}" data-bs-interval="2000">
+                        <img src="assets/buyers/${i}.jpeg" class="d-block w-100" alt="Imagen ${i}">
+                    </div>
+                `;
+            }
+
+            document.getElementById("carousel-indicators").innerHTML = indicators;
+            document.getElementById("carousel-inner").innerHTML = images;
+        });
+    </script>
+    <!-- TERMINA CARRUSEL DE IMÁGENES -->
     <!-- Header - set the background image for the header in the line below-->
     <header class="py-5 bg-image-full"
         style="background-image: url('assets/mar.jpg'); background-size: cover; background-position: center;">
@@ -145,8 +184,8 @@
     <div class="py-5 bg-image-full" style="
         background-image: url('https://source.unsplash.com/4ulffa6qoKA/600x900');">
         <div class="text-center my-1">
-            <img class="img-fluid  mb-4" src="assets/EL_FENIX.png" alt="El Fénix">
             <h4 class="text-danger fs-3 fw-bolder">El Fénix</h4>
+            <img class="img-fluid  mb-4" src="assets/EL_FENIX.png" alt="El Fénix">            
         </div>
         <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
         <div style="height: 0rem"></div>
@@ -183,7 +222,7 @@
         <div class="container text-center">
             <span><a href="https://www.facebook.com/casualidadeslanovela" target="_blank" rel="noopener">
                     <img src="assets/facebook.png" alt="Facebook" style="width:21px; height:21px;">
-                </a></span>&nbsp;&nbsp;
+                </a></span>
         </div>
         <div class="container"><a class="m-0 text-end text-white" href="#"> Ir arriba</a></div>
         <br>
