@@ -1,435 +1,498 @@
-
 /* ====== ESTILOS GENERALES ====== */
 body {
-    /*Fondo negro puro */
-    background-color: #000;
-    /*Texto blanco para buen contraste */
-    color: #fff;
+  /*Fondo negro puro */
+  background-color: #000;
+  /*Texto blanco para buen contraste */
+  color: #fff;
 
-    /*Fondo  casi blanco
+  /*Fondo  casi blanco
     background-color: #f4f4f9; */
-    /* Texto blanco para buen contraste
+  /* Texto blanco para buen contraste
     color: #000; */
 
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
 }
 
 .header img {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 0px;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 0px;
 }
 
 .header h1 {
-    font-size: 32px;
-    font-family: Algerian, serif;
-    margin: 0;
-    font-weight: lighter
+  font-size: 32px;
+  font-family: Algerian, serif;
+  margin: 0;
+  font-weight: lighter;
 }
 
 .blue-text {
-    color: #00B6FA
+  color: #00b6fa;
 }
 
 .red-text {
-    color: red;
+  color: red;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    gap: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 18px;
 }
 
 .card {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 280px;
-    padding: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, border-color 0.2s;
-    gap: 8px;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 280px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, border-color 0.2s;
+  gap: 8px;
+  flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    border-color: #3498db;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-color: #3498db;
 }
 
 .card h3 {
-    margin: 0;
-    font-size: 16px;
-    color: #ffffff;
-    text-align: center;
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
 }
 
 .card p {
-    margin: 4px 0;
-    font-size: 13.5px;
-    color: #ecf0f1;
-    text-align: center;
+  margin: 4px 0;
+  font-size: 13.5px;
+  color: #ecf0f1;
+  text-align: center;
 }
 
 .card-img-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 0px;
-    margin-bottom: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: -5px;
 }
 
 .card-img {
-    width: 50px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    transition: transform 0.3s ease; /* Suaviza la transición */
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease; /* Suaviza la transición */
 }
 
 .card-img:hover {
-    transform: scale(1.7); /* Aumenta el tamaño un 20% */
+  transform: scale(1.7); /* Aumenta el tamaño un 20% */
 }
 
-
 .card a {
-    display: inline-block;
-    padding: 6px 10px;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    font-size: 13px;
-    text-align: center;
-    margin-left: 8px;
-    font-weight: bold;
+  display: inline-block;
+  padding: 6px 10px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 13px;
+  text-align: center;
+  margin-left: 8px;
+  font-weight: bold;
 }
 
 /* Tarjeta PASALISTA - Azul */
 .card.pasalista {
-    background-color: #0BBEFD;
+  background-color: #0bbefd;
 }
 
 .card.pasalista a {
-    background-color: #2980b9;
+  background-color: #2980b9;
 }
 
 .card.pasalista h3,
 .card.pasalista p {
-    color: #000;
+  color: #000;
 }
 
 .card.pasalista a:hover {
-    background-color: #1f669e;
+  background-color: #1f669e;
 }
 
 /* Tarjeta CASUALIDADES - Amarillo */
 .card.casualidades {
-    background-color: #f5f5dc;
+  background-color: #f5f5dc;
 }
 
 .card.casualidades h3,
 .card.casualidades p {
-    color: #000;
+  color: #000;
 }
 
 .card.casualidades a {
-    background-color: #f39c12;
+  background-color: #f39c12;
 }
 
 .card.casualidades a:hover {
-    background-color: #c2a477;
+  background-color: #c2a477;
+}
+
+/*TAREJTAS DE ANUNCIOS*/
+
+/* Anuncio Hostinger */
+.card.hostinger-ad {
+  background-color: #673de6; /* Morado Hostinger */
+  width: 280px;
+  height: 20px; /* Más delgado que las tarjetas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card.hostinger-ad:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card.hostinger-ad a {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.card.hostinger-ad a:hover {
+  color: #ffd700; /* Amarillo dorado */
+}
+
+/* ANUNCIO MERCADO LIBRE */
+
+/* Anuncio Mercado Libre */
+.card.ml-ad {
+  background-color: #ffe600; /* Color corporativo de Mercado Libre */
+  width: 280px;
+  height: 20px; /* Igual de delgado que el de Hostinger */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card.ml-ad:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card.ml-ad a {
+  color: #333; /* Color oscuro para contraste con amarillo */
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.card.ml-ad a:hover {
+  color: #ff9900; /* Naranja Mercado Libre para hover */
 }
 
 /* LÉEME Y SABRÁS QUÉ ES EL VIH/SIDA - Rojo */
 .card.vih {
-    background-color: #e74c3c;
+  background-color: #e74c3c;
 }
 
 .card.vih a {
-    background-color: #c0392b;
+  background-color: #c0392b;
 }
 
 .card.vih h3,
 .card.vih p {
-    color: yellow
+  color: yellow;
 }
 
 .card.vih a:hover {
-    background-color: #a93226;
+  background-color: #a93226;
 }
 
 /* TEATRO VIAJER EL FÉNIX - Blanco */
 .card.teatro-viajero {
-    background-color: #ffffff;
-    color: #2c3e50;
+  background-color: #ffffff;
+  color: #2c3e50;
 }
 
 .card.teatro-viajero h3,
 .card.teatro-viajero p {
-    color: #2c3e50;
+  color: #2c3e50;
 }
 
 .card.teatro-viajero a {
-    background-color: #34495e;
+  background-color: #34495e;
 }
 
 .card.teatro-viajero a:hover {
-    background-color: #2c3e50;
+  background-color: #2c3e50;
 }
 
 /* TALLER ACTORAL EL FÉNIX - Naranja */
 .card.taller-actoral {
-    background-color: #f39c12;
+  background-color: #f39c12;
 }
 
 .card.taller-actoral a {
-    background-color: #e67e22;
+  background-color: #e67e22;
 }
 
 .card.taller-actoral h3,
 .card.taller-actoral p {
-    color: #000;
+  color: #000;
 }
 
 .card.taller-actoral a:hover {
-    background-color: #d35400;
+  background-color: #d35400;
 }
 
 /* SOFTWIC - Verde */
 .card.softwic {
-    background-color: #2ecc71;
+  background-color: #2ecc71;
 }
 
 .card.softwic a {
-    background-color: #27ae60;
+  background-color: #27ae60;
 }
 
 .card.softwic h3,
 .card.softwic p {
-    color: #000;
+  color: #000;
 }
 
 .card.softwic a:hover {
-    background-color: #1e8449;
+  background-color: #1e8449;
 }
 
 /* PROGRAMACIÓN FÉNIX - #66C8C9 */
 .card.programacion-fenix {
-    background-color: #66c8c9;
+  background-color: #66c8c9;
 }
 
 .card.programacion-fenix a {
-    background-color: #52abae;
+  background-color: #52abae;
 }
 
 .card.programacion-fenix h3,
 .card.programacion-fenix p {
-    color: #000;
+  color: #000;
 }
 
 .card.programacion-fenix a:hover {
-    background-color: #3a8b8d;
+  background-color: #3a8b8d;
 }
 
 /* FONDEADORA EL FÉNIX - Verde dólar */
 .card.fondeadora {
-    background-color: #D9FDD3
+  background-color: #d9fdd3;
 }
 
 .card.fondeadora a {
-    background-color: #229954;
+  background-color: #229954;
 }
 
 .card.fondeadora h3,
 .card.fondeadora p {
-    color: #000;
+  color: #000;
 }
 
 .card.fondeadora a:hover {
-    background-color: #1e8449;
+  background-color: #1e8449;
 }
 
 /* HOTELES / HOSPEDAJE - Azul cielo */
 .card.hoteles {
-    background-color: #5dade2;
+  background-color: #5dade2;
 }
 
 .card.hoteles a {
-    background-color: #3498db;
+  background-color: #3498db;
 }
 
 .card.hoteles h3,
 .card.hoteles p {
-    color: #000;
+  color: #000;
 }
 
 .card.hoteles a:hover {
-    background-color: #2e86c1;
+  background-color: #2e86c1;
 }
 
 /* VIDEOS SELENE - Morado */
 .card.videos-selene {
-    background-color: #9b59b6;
+  background-color: #9b59b6;
 }
 
 .card.videos-selene a {
-    background-color: #8e44ad;
+  background-color: #8e44ad;
 }
 
 .card.videos-selene a:hover {
-    background-color: #7d3c98;
+  background-color: #7d3c98;
 }
 
 /* PENSANDO EN TI - Rojo */
 .card.pensando-en-ti {
-    background-color: #e74c3c;
+  background-color: #e74c3c;
 }
 
 .card.pensando-en-ti a {
-    background-color: #c0392b;
+  background-color: #c0392b;
 }
 
 .card.pensando-en-ti a:hover {
-    background-color: #a93226;
+  background-color: #a93226;
 }
 
-/* CUTANE TAO - Crema */
-.card.cutane-tao {
-    background-color: #f1c40f;
-    color: #2c3e50;
+/* CUTANE TAU - Crema */
+.card.cutane-tau {
+  background-color: #f5e0d7;
+  color: #2c3e50;
 }
 
-.card.cutane-tao h3,
-.card.cutane-tao p {
-    color: #000;
+.card.cutane-tau h3,
+.card.cutane-tau p {
+  color: #000;
 }
 
-.card.cutane-tao a {
-    background-color: #f39c12;
+.card.cutane-tau a {
+  background-color: #f0c6a9;
+  color: #2c3e50;
 }
 
-.card.cutane-tao a:hover {
-    background-color: #e67e22;
+.card.cutane-tau a:hover {
+  background-color: #e8b495;
 }
 
 /* BELLEZA Y PROTECCIÓN - Azul y Rojo */
 .card.belleza {
-    background: linear-gradient(135deg, #3498db 50%, #e74c3c 50%);
+  background: linear-gradient(135deg, #3498db 50%, #e74c3c 50%);
 }
 
 .card.belleza a {
-    background-color: #2980b9;
+  background-color: #2980b9;
 }
 
 .card.belleza a:hover {
-    background-color: #1f669e;
+  background-color: #1f669e;
 }
 
 /* ESTRELLA DE CRISTAL BOUTIQUE - rosa pastel */
 .card.estrella {
-    background-color: #f8c8d4;
-    /* Rosa pastel elegante */
-    color: #2c3e50;
-    /* Letras en negro oscuro */
+  background-color: #f8c8d4;
+  /* Rosa pastel elegante */
+  color: #2c3e50;
+  /* Letras en negro oscuro */
 }
 
 .card.estrella h3,
 .card.estrella p {
-    color: #000;
+  color: #000;
 }
 
 .card.estrella a {
-    background-color: #f1a7c3;
-    /* Rosa suave para los enlaces */
-    color: #2c3e50;
-    /* Letras en negro oscuro en los enlaces */
+  background-color: #f1a7c3;
+  /* Rosa suave para los enlaces */
+  color: #2c3e50;
+  /* Letras en negro oscuro en los enlaces */
 }
 
 .card.estrella a:hover {
-    background-color: #e892b4;
-    /* Rosa más intenso al pasar el mouse */
+  background-color: #e892b4;
+  /* Rosa más intenso al pasar el mouse */
 }
 
 /* EQUINOTERAPIA PILAUTLI - Lila */
 .card.equinoterapia {
-    background-color: #af7ac5;
+  background-color: #af7ac5;
 }
 
 .card.equinoterapia a {
-    background-color: #9b59b6;
+  background-color: #9b59b6;
 }
 
 .card.equinoterapia h3,
 .card.equinoterapia p {
-    color: #000;
+  color: #000;
 }
 
 .card.equinoterapia a:hover {
-    background-color: #884ea0;
+  background-color: #884ea0;
 }
 
 /* ====== ESTILOS DEL FOOTER ====== */
 footer {
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    font-family: Arial, sans-serif;
-    border-top: 4px solid #3498db;
-    margin-top: 40px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  border-top: 4px solid #3498db;
+  margin-top: 40px;
 }
 
 .footer-column {
-    flex: 1;
-    min-width: 200px;
-    text-align: center;
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
 }
 
 .footer-column h4 {
-    font-size: 16px;
-    font-weight: bold;
-    color: #ecf0f1;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 5px;
-    display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ecf0f1;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  display: inline-block;
 }
 
 .footer-column a {
-    color: #bdc3c7;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    transition: color 0.3s;
+  color: #bdc3c7;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  transition: color 0.3s;
 }
 
 .footer-column a:hover {
-    color: #3498db;
-    text-decoration: underline;
+  color: #3498db;
+  text-decoration: underline;
 }
