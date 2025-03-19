@@ -1,4 +1,4 @@
-/* ====== ESTILOS GENERALES ====== */
+/* ====== BODY ====== */
 body {
   /*Fondo negro puro */
   background-color: #000;
@@ -17,6 +17,7 @@ body {
   box-sizing: border-box;
 }
 
+/* ====== HEADER ====== */
 .header {
   display: flex;
   align-items: center;
@@ -29,7 +30,6 @@ body {
   width: 90px;
   height: 90px;
   object-fit: cover;
-  border-radius: 0px;
 }
 
 .header h1 {
@@ -47,12 +47,30 @@ body {
   color: red;
 }
 
+/* ====== DESCRIPCIÓN DE SLOGAN ====== */
+.company-description {
+  font-size: 16px;
+  text-align: center;
+  margin-top: -10px;
+  color: #fff;
+}
+
+.company-details {
+  text-align: center;
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.2;
+}
+
+/* ====== CONTENEDOR DE TARJETAS ====== */
+
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
   gap: 18px;
+  margin-top: -17px;
 }
 
 .card {
@@ -77,7 +95,7 @@ body {
 
 .card h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   color: #ffffff;
   text-align: center;
 }
@@ -87,28 +105,6 @@ body {
   font-size: 13.5px;
   color: #ecf0f1;
   text-align: center;
-}
-
-.card-img-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 0px;
-  margin-bottom: -5px;
-}
-
-.card-img {
-  width: 50px;
-  height: 70px;
-  object-fit: cover;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  transition: transform 0.3s ease; /* Suaviza la transición */
-}
-
-.card-img:hover {
-  transform: scale(1.7); /* Aumenta el tamaño un 20% */
 }
 
 .card a {
@@ -124,7 +120,34 @@ body {
   font-weight: bold;
 }
 
-/* Tarjeta PASALISTA - Azul */
+/* ====== ESTILOS DE LOGOS ====== */
+
+.card-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Mantiene la posición original */
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: -5px;
+}
+
+.card-img {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+  transform-origin: bottom left; /* Punto de crecimiento en la esquina inferior izquierda */
+}
+
+.card-img:hover {
+  transform: scale(2); /* Aumenta el tamaño hacia la derecha y arriba */
+}
+
+/* ====== ESTILOS DEL COLORES TARJETAS C/U ====== */
+
+/* PASALISTA - Azul */
 .card.pasalista {
   background-color: #0bbefd;
 }
@@ -142,7 +165,7 @@ body {
   background-color: #1f669e;
 }
 
-/* Tarjeta CASUALIDADES - Amarillo */
+/* CASUALIDADES - Amarillo */
 .card.casualidades {
   background-color: #f5f5dc;
 }
@@ -158,70 +181,6 @@ body {
 
 .card.casualidades a:hover {
   background-color: #c2a477;
-}
-
-/*TAREJTAS DE ANUNCIOS*/
-
-/* Anuncio Hostinger */
-.card.hostinger-ad {
-  background-color: #673de6; /* Morado Hostinger */
-  width: 280px;
-  height: 20px; /* Más delgado que las tarjetas */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card.hostinger-ad:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card.hostinger-ad a {
-  color: #ffffff;
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.card.hostinger-ad a:hover {
-  color: #ffd700; /* Amarillo dorado */
-}
-
-/* ANUNCIO MERCADO LIBRE */
-
-/* Anuncio Mercado Libre */
-.card.ml-ad {
-  background-color: #ffe600; /* Color corporativo de Mercado Libre */
-  width: 280px;
-  height: 20px; /* Igual de delgado que el de Hostinger */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card.ml-ad:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card.ml-ad a {
-  color: #333; /* Color oscuro para contraste con amarillo */
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.card.ml-ad a:hover {
-  color: #ff9900; /* Naranja Mercado Libre para hover */
 }
 
 /* LÉEME Y SABRÁS QUÉ ES EL VIH/SIDA - Rojo */
@@ -297,21 +256,21 @@ body {
   background-color: #1e8449;
 }
 
-/* PROGRAMACIÓN FÉNIX - #66C8C9 */
-.card.programacion-fenix {
+/* PROGRAM - #66C8C9 */
+.card.program {
   background-color: #66c8c9;
 }
 
-.card.programacion-fenix a {
+.card.program a {
   background-color: #52abae;
 }
 
-.card.programacion-fenix h3,
-.card.programacion-fenix p {
+.card.program h3,
+.card.program p {
   color: #000;
 }
 
-.card.programacion-fenix a:hover {
+.card.program a:hover {
   background-color: #3a8b8d;
 }
 
@@ -397,7 +356,7 @@ body {
   background-color: #e8b495;
 }
 
-/* BELLEZA Y PROTECCIÓN - Azul y Rojo */
+/* BELLEZA Y SALUD - Azul y Rojo */
 .card.belleza {
   background: linear-gradient(135deg, #3498db 50%, #e74c3c 50%);
 }
@@ -413,9 +372,7 @@ body {
 /* ESTRELLA DE CRISTAL BOUTIQUE - rosa pastel */
 .card.estrella {
   background-color: #f8c8d4;
-  /* Rosa pastel elegante */
   color: #2c3e50;
-  /* Letras en negro oscuro */
 }
 
 .card.estrella h3,
@@ -425,14 +382,11 @@ body {
 
 .card.estrella a {
   background-color: #f1a7c3;
-  /* Rosa suave para los enlaces */
   color: #2c3e50;
-  /* Letras en negro oscuro en los enlaces */
 }
 
 .card.estrella a:hover {
   background-color: #e892b4;
-  /* Rosa más intenso al pasar el mouse */
 }
 
 /* EQUINOTERAPIA PILAUTLI - Lila */
@@ -451,6 +405,68 @@ body {
 
 .card.equinoterapia a:hover {
   background-color: #884ea0;
+}
+
+/* ====== ESTILOS DE PUBLICIDAD ====== */
+
+/* PUBLICIDAD HOSTINGER */
+.card.hostinger-ad {
+  background-color: #673de6; /* Morado Hostinger */
+  width: 280px;
+  height: 20px; /* Más delgado que las tarjetas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card.hostinger-ad:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card.hostinger-ad a {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.card.hostinger-ad a:hover {
+  color: #ffd700; /* Amarillo dorado */
+}
+
+/* PUBLICIDAD MERCADO LIBRE */
+.card.ml-ad {
+  background-color: #ffe600; /* Color corporativo de Mercado Libre */
+  width: 280px;
+  height: 20px; /* Igual de delgado que el de Hostinger */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card.ml-ad:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card.ml-ad a {
+  color: #333; /* Color oscuro para contraste con amarillo */
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.card.ml-ad a:hover {
+  color: #ff9900; /* Naranja Mercado Libre para hover */
 }
 
 /* ====== ESTILOS DEL FOOTER ====== */
