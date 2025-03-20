@@ -310,16 +310,16 @@ body {
   background-color: #2e86c1;
 }
 
-/* VIDEOS SELENE - Morado */
-.card.videos-selene {
+/* transfer SELENE - Morado */
+.card.transfer-selene {
   background-color: #9b59b6;
 }
 
-.card.videos-selene a {
+.card.transfer-selene a {
   background-color: #8e44ad;
 }
 
-.card.videos-selene a:hover {
+.card.transfer-selene a:hover {
   background-color: #7d3c98;
 }
 
