@@ -80,7 +80,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 10px;
   width: 280px;
-  padding: 16px;
+  padding: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, border-color 0.2s;
   gap: 8px;
@@ -109,7 +109,7 @@ body {
 
 .card a {
   display: inline-block;
-  padding: 6px 10px;
+  padding: 6px 6px;
   color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
@@ -409,11 +409,15 @@ body {
 
 /* ====== ESTILOS DE PUBLICIDAD ====== */
 
+.publicidad {
+  margin-bottom: -25px;
+}
+
 /* PUBLICIDAD HOSTINGER */
 .card.hostinger-ad {
   background-color: #673de6; /* Morado Hostinger */
   width: 280px;
-  height: 20px; /* Más delgado que las tarjetas */
+  height: 40px; /* nivel de alto de la tarjeta */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -443,7 +447,7 @@ body {
 .card.ml-ad {
   background-color: #ffe600; /* Color corporativo de Mercado Libre */
   width: 280px;
-  height: 20px; /* Igual de delgado que el de Hostinger */
+  height: 40px; /* nivel de alto de la tarjeta */
   display: flex;
   align-items: center;
   justify-content: center;
