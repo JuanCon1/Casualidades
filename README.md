@@ -1,3 +1,3 @@
 # Casualidades
 
-El libro y  La serie
+El libro y La serie
